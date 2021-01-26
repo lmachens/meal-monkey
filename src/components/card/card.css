@@ -1,0 +1,19 @@
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-text {
+  color: #4a4b4d;
+  font-weight: bold;
+  text-align: center;
+}
