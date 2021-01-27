@@ -13,3 +13,4 @@ export const italian = () => cardItalian;
 export const offers = () => cardOffers;
 export const sriLankan = () => cardSriLankan;
 export const container = () => cardContainer;
+container.parameters = { layout: "fullscreen" };
