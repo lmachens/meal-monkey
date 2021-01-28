@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-#root {
-  padding: 0 !important;
-}
-
 html {
   font-size: 16px;
 }
