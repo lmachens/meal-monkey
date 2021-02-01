@@ -7,8 +7,9 @@
 </form>
 */
 export function createRegisterForm() {
-  //   const title = document.createElement("h2");
-  //   title.innerText = "Reset Password";
+  const form = document.createElement("form");
+  form.className = "form";
+
   const button = document.createElement("button");
   button.innerText = "Register";
 
@@ -18,5 +19,10 @@ export function createRegisterForm() {
 
   button.addEventListener("click", register);
 
-  return button;
+  const title = document.createElement("h2");
+  title.innerText = "Reset Password";
+
+  form.append(title, button);
+
+  return form;
 }
