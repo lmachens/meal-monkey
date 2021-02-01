@@ -1,14 +1,14 @@
 .card {
-  width: 100px;
-  height: 100px;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  width: 100px;
 }
 
 .card-image {
   border-radius: 20px;
-  height: 100%;
-  width: 100%;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 
@@ -16,4 +16,23 @@
   color: #4a4b4d;
   font-weight: bold;
   text-align: center;
+  margin: 3px 0;
+}
+
+.card-container {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  column-gap: 20px;
+  padding-left: 20px;
+  justify-content: start;
+}
+
+.card-container::after {
+  content: "";
+  width: 1px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
 }
