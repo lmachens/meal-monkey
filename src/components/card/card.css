@@ -13,7 +13,7 @@
 }
 
 .card-text {
-  color: #4a4b4d;
+  color: var(--primary-font-color);
   font-weight: bold;
   text-align: center;
   margin: 3px 0;

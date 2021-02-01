@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: #fc6011;
+  --primary-font-color: #4a4b4d;
+  --placeholder-color: #b6b7b7;
+  --input-background-color: #f2f2f2;
+}
+
 html {
   font-size: 16px;
 }
