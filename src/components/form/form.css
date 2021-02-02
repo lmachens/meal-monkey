@@ -1,2 +1,9 @@
 .form {
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.form .input {
+  margin-top: 2em;
 }
