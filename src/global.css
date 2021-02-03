@@ -38,3 +38,12 @@ textarea {
   margin: 0;
   font-family: "Metropolis", "Comic sans ms", sans-serif;
 }
+
+a,
+a:visited,
+a:active,
+a:hover {
+  color: #fc6011;
+  font-weight: bold;
+  text-decoration: none;
+}

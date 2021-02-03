@@ -1,0 +1,26 @@
+.form {
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.form .input {
+  margin-top: 2em;
+}
+
+.form__hint a {
+  margin-left: 0.5em;
+}
+
+.form__otp {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-column-gap: 1.2em;
+}
+
+.form__otp input {
+  padding: 10px;
+  width: 2.8rem;
+  border-radius: 10px;
+}
