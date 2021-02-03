@@ -1,6 +1,11 @@
 export function createElement(tagName, props) {
   const element = document.createElement(tagName);
-  Object.assign(element, props);
+  const { children, ...other } = props;
+  Object.assign(element, other);
+
+  if (children) {
+    element.append(...children);
+  }
   /*
   props is a completely freely assignable name, it could also be named fische
   
