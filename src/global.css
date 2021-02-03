@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/*
+  Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0
+*/
+@font-face {
+  font-family: "Metropolis";
+  src: url("./assets/metropolis.woff2") format("woff2"),
+    url("./assets/metropolis.woff") format("woff"),
+    url("./assets/metropolis.ttf") format("ttf");
+}
 
 *,
 *::after,
@@ -18,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", "Comic sans ms", sans-serif;
   margin: 0;
 }
 
@@ -28,5 +36,5 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", "Comic sans ms", sans-serif;
 }
