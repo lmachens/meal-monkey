@@ -38,7 +38,7 @@ export function createVerifyForm() {
       }),
       createElement("input", {
         type: "submit",
-        innerText: "Next",
+        value: "Next",
         className: "btn",
       }),
       createElement("p", {
