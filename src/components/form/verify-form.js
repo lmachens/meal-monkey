@@ -11,9 +11,6 @@ function createOTPInputElement() {
 }
 
 export function createVerifyForm() {
-  const form = document.createElement("form");
-  form.className = "form";
-
   const title = document.createElement("h2");
   title.innerText = "We have sent an OTP to your Mobile";
 
@@ -42,18 +39,21 @@ export function createVerifyForm() {
   resendLink.innerText = "Click Here";
   resendLink.href = "#";
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  const form = createElement("form", {
+    className: "form",
+    onsubmit: function (event) {
+      event.preventDefault();
 
-    const secretPassword = "3217";
-    const password =
-      otpOne.value + otpTwo.value + otpThree.value + otpFour.value;
+      const secretPassword = "3217";
+      const password =
+        otpOne.value + otpTwo.value + otpThree.value + otpFour.value;
 
-    if (password === secretPassword) {
-      alert("Password is correct");
-    } else {
-      alert("Password is NOT correct");
-    }
+      if (password === secretPassword) {
+        alert("Password is correct");
+      } else {
+        alert("Password is NOT correct");
+      }
+    },
   });
 
   hint.append(resendLink);
