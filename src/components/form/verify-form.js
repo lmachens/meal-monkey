@@ -46,11 +46,14 @@ export function createVerifyForm() {
     event.preventDefault();
 
     const secretPassword = "3217";
+    const password =
+      otpOne.value + otpTwo.value + otpThree.value + otpFour.value;
 
-    alert(
-      `Your OTP - ${otpOne.value}${otpTwo.value}${otpThree.value}${otpFour.value}- is correct`
-      // "Your OTP - " + otpOne.value + otpTwo.value + otpThree.value +otpFour.value + "- is correct"
-    );
+    if (password === secretPassword) {
+      alert("Password is correct");
+    } else {
+      alert("Password is NOT correct");
+    }
   });
 
   hint.append(resendLink);
