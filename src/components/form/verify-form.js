@@ -5,21 +5,9 @@ function createOTPInputElement() {
     className: "input",
     placeholder: "*",
     type: "password",
+    maxLength: 1,
   });
   return input;
-}
-
-function createPasswordContainerElement() {
-  const otpOne = createOTPInputElement();
-  const otpTwo = createOTPInputElement();
-  const otpThree = createOTPInputElement();
-  const otpFour = createOTPInputElement();
-  const passwordContainer = createElement("div", {
-    className: "form__otp",
-    children: [otpOne, otpTwo, otpThree, otpFour],
-  });
-
-  return passwordContainer;
 }
 
 export function createVerifyForm() {
@@ -33,7 +21,14 @@ export function createVerifyForm() {
   text.innerText =
     "Please check your mobile number 071*****12 continue to reset your password";
 
-  const passwordContainer = createPasswordContainerElement();
+  const otpOne = createOTPInputElement();
+  const otpTwo = createOTPInputElement();
+  const otpThree = createOTPInputElement();
+  const otpFour = createOTPInputElement();
+  const passwordContainer = createElement("div", {
+    className: "form__otp",
+    children: [otpOne, otpTwo, otpThree, otpFour],
+  });
 
   const button = document.createElement("button");
   button.innerText = "Next";
@@ -46,6 +41,17 @@ export function createVerifyForm() {
   const resendLink = document.createElement("a");
   resendLink.innerText = "Click Here";
   resendLink.href = "#";
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const secretPassword = "3217";
+
+    alert(
+      `Your OTP - ${otpOne.value}${otpTwo.value}${otpThree.value}${otpFour.value}- is correct`
+      // "Your OTP - " + otpOne.value + otpTwo.value + otpThree.value +otpFour.value + "- is correct"
+    );
+  });
 
   hint.append(resendLink);
 
