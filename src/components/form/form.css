@@ -25,3 +25,9 @@
   border-radius: 10px;
   text-align: center;
 }
+
+.form__otp input::-webkit-outer-spin-button,
+.form__otp input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
